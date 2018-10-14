@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone_app/home_page.dart';
 
 void main() => runApp(new MyApp());
 
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Text("WhatsApp clone demo")///new MyHomePage(title: 'WhatsApp clone demo'),
+      home: new HomePage(),
     );
   }
 }
