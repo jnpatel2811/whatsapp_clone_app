@@ -33,28 +33,44 @@ class _HomePageState extends State<HomePage> {
           ]),
         ),
         body: TabBarView(children: [
-          Column(
-            children: <Widget>[
-              Text("Camera"),
-            ],
-          ),
-          Column(
-            children: <Widget>[
-              Text("Chats"),
-            ],
-          ),
-          Column(
-            children: <Widget>[
-              Text("Stories"),
-            ],
-          ),
-          Column(
-            children: <Widget>[
-              Text("Calls"),
-            ],
-          ),
+          _buildCameraLayout(),
+          _buildChatsLayout(),
+          _buildStatusLayout(),
+          _buildCallsLayout(),
         ]),
       ),
+    );
+  }
+
+  Widget _buildCameraLayout() {
+    return Column(
+      children: <Widget>[
+        Text("Camera"),
+      ],
+    );
+  }
+
+  Widget _buildChatsLayout() {
+    return Column(
+      children: <Widget>[
+        Text("Chats"),
+      ],
+    );
+  }
+
+  Widget _buildStatusLayout() {
+    return Column(
+      children: <Widget>[
+        Text("Status"),
+      ],
+    );
+  }
+
+  Widget _buildCallsLayout() {
+    return Column(
+      children: <Widget>[
+        Text("Calls"),
+      ],
     );
   }
 }
