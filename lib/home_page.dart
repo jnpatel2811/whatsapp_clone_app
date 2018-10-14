@@ -76,44 +76,50 @@ class _HomePageState extends State<HomePage> {
     return ListView.builder(
       itemCount: demoChatData.length,
       itemBuilder: (context, position) {
-        return Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-                children: <Widget>[
-                  Expanded(
-                    child: Icon(
-                      Icons.account_circle,
-                      size: 48.0,
+        return InkWell(
+          onTap: () {
+            // TODO do something here
+          },
+          splashColor: Colors.blue,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Icon(
+                        Icons.account_circle,
+                        size: 48.0,
+                      ),
+                      flex: 1,
                     ),
-                    flex: 1,
-                  ),
-                  Expanded(
-                    flex: 7,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text(
-                            demoChatData[position].name,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16.0,
+                    Expanded(
+                      flex: 7,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              demoChatData[position].name,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16.0,
+                              ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 4.0),
-                            child: Text(demoChatData[position].message,
-                                style: TextStyle(
-                                  fontSize: 14.0,
-                                )),
-                          ),
-                        ],
+                            Padding(
+                              padding: const EdgeInsets.only(top: 4.0),
+                              child: Text(demoChatData[position].message,
+                                  style: TextStyle(
+                                    fontSize: 14.0,
+                                  )),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
+                  ],
+                ),
+          ),
         );
       },
     );
