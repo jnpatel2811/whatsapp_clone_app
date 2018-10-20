@@ -12,6 +12,8 @@ class _HomePageState extends State<HomePage> {
     UserData("Nilay", "Flutter is so cool!"),
     UserData("Sagar", "Yeah! Nilay is right."),
     UserData("Jaydeep", "I don't know about it."),
+    UserData("Mit", "Hey, how are you."),
+    UserData("Kartik", "Hey, whatsapp."),
     UserData("Maulik", "Bro, this is like magic. It is so cool.."),
   ];
 
